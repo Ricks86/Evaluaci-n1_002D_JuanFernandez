@@ -39,6 +39,6 @@ public class PedidoController {
     }
     @GetMapping("/estado/{estado}")
     public List<Pedido> buscarPorEstado(@PathVariable String estado){
-        return pedidoService.getListaPedidos(estado);
+        return pedidoService.getListaPedidosOrdenado(estado);
     }
 }
