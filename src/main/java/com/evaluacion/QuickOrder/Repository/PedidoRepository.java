@@ -1,6 +1,6 @@
-package Repository;
+package com.evaluacion.QuickOrder.Repository;
 
-import Model.Pedido;
+import com.evaluacion.QuickOrder.Model.Pedido;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -24,6 +24,7 @@ public class PedidoRepository {
     }
 
     public void agregarPedido (Pedido pedido){
+        pedido.setId(pedidoRepository.size()+1);
         pedidoRepository.add(pedido);
     }
 
@@ -41,7 +42,7 @@ public class PedidoRepository {
         Pedido pedidoCambiado = new Pedido();
         pedidoCambiado.setId(pedidoActualizado.getId());
         pedidoCambiado.setNombreCliente(pedidoActualizado.getNombreCliente());
-        pedidoCambiado.setDesripcion(pedidoActualizado.getDesripcion());
+        pedidoCambiado.setDescripcion(pedidoActualizado.getDescripcion());
         pedidoCambiado.setEstado(pedidoActualizado.getEstado());
         pedidoCambiado.setTipoPedido(pedidoActualizado.getTipoPedido());
         pedidoCambiado.setMontoTotal(pedidoActualizado.getMontoTotal());

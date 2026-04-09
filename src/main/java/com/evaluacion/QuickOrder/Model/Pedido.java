@@ -1,45 +1,44 @@
-package Model;
+package com.evaluacion.QuickOrder.Model;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDate;
 
 public class Pedido {
-    private int contador = 0;
+
     private int id;
     private String nombreCliente;
-    private String desripcion;
+    private String descripcion;
     private Estado estado;
     private TipoPedido tipoPedido;
     private double montoTotal;
+
     private LocalDate fechaPedido;
 
-    public Pedido() {
-    }
 
-    public Pedido(String nombreCliente, String desripcion, Estado estado, TipoPedido tipoPedido, double montoTotal) {
-        this.id = contador++;
+    public Pedido(String nombreCliente, String descripcion, Estado estado, TipoPedido tipoPedido, double montoTotal) {
         this.nombreCliente = nombreCliente;
-        this.desripcion = desripcion;
+        this.descripcion = descripcion;
         this.estado = estado;
         this.tipoPedido = tipoPedido;
         this.montoTotal = montoTotal;
         this.fechaPedido = LocalDate.now();
-
     }
+    public Pedido(){}
 
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
 
-    public String getDesripcion() {
-        return desripcion;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setDesripcion(String desripcion) {
-        this.desripcion = desripcion;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public Estado getEstado() {

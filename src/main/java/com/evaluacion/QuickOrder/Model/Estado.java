@@ -1,4 +1,4 @@
-package Model;
+package com.evaluacion.QuickOrder.Model;
 
 public enum Estado {
     PENDIENTE,
