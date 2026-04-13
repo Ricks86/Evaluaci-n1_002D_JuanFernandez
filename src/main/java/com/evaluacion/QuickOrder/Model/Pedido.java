@@ -1,21 +1,20 @@
 package com.evaluacion.QuickOrder.Model;
 
-import org.jetbrains.annotations.NotNull;
+
 
 import java.time.LocalDate;
 
 public class Pedido {
-
+    //atributos de nuestro modelo
     private int id;
     private String nombreCliente;
     private String descripcion;
     private Estado estado;
     private TipoPedido tipoPedido;
     private double montoTotal;
-
     private LocalDate fechaPedido;
 
-
+    //constructor
     public Pedido(String nombreCliente, String descripcion, Estado estado, TipoPedido tipoPedido, double montoTotal) {
         this.nombreCliente = nombreCliente;
         this.descripcion = descripcion;
@@ -24,8 +23,9 @@ public class Pedido {
         this.montoTotal = montoTotal;
         this.fechaPedido = LocalDate.now();
     }
+    //constructor vacio
     public Pedido(){}
-
+    //getters y setters
     public int getId() {
         return id;
     }
